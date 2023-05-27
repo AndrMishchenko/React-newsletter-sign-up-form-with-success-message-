@@ -1,38 +1,337 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #36384d;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-window{
+  width: 800px;
+  height: 530px;
+  background-color: white;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+.main-window-info-mobile{
+  display: none;
+}
+
+.main-window-info{
+  width: 350px;
+  height: 430px;
+  margin: 0 auto;
+}
+
+.main-window-info h2{
+  font-weight: 700;
+  font-size: 40px;
+  color: #232744;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-window-info-subtitle{
+  color: #232744;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.main-window-info-list{
+  margin-bottom: 33px;
+}
+
+.first-list-item,
+.second-list-item,
+.third-list-item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  gap: 10px;
+  color: #232744;
+  margin-bottom: 7px;
+}
+
+.main-window-info-email{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.main-window-info-email p{
+  font-size: 12px;
+  font-weight: 700;
+  color: #232744;
+}
+
+.main-window-info-email .main-window-info-email-error{
+  font-size: 12px;
+  font-weight: 700;
+  color: #cb6b6c;
+}
+
+.main-window-input{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  font-size: 20px;
+  padding: 20px;
+  outline: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.main-window-input-error{
+  border: 1px solid #cb6b6c;
+  color: #cb6b6c;
+  background-color: #ffe8e6;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 20px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.main-window-button{
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #232742;
+  border-radius: 10px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.main-window-button:hover{
+  background: linear-gradient(to left, #ff5379, #fe693e);
+  box-shadow: -10px 10px 20px#ffcfcb,
+              10px 10px 20px #ffcfcb;
+}
+
+.main-window-img{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.main-window-img img{
+  width: 340px;
+  height: auto;
+
+}
+
+/*success*/
+.success-window{
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-window-block-info{
+  width: 320px;
+  height: 320px;
+  font-family: 'Roboto';
+}
+
+.success-window-block-info img{
+  height: 50px;
+  width: 50px;
+}
+
+.success-window-block-info h2{
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #232744;
+}
+
+.success-window-block-info p{
+  color: #232744;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.success-window-block-info span{
+  font-weight: 700;
+}
+
+.success-window-block-info button{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #232742;
   color: white;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.success-window-block-info button:hover{
+  background: linear-gradient(to left, #ff693e, #ff5379);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:990px){
+  .main-window{
+    width: 600px;
+    height: 530px;
   }
-  to {
-    transform: rotate(360deg);
+  .main-window-info{
+    width: 230px;
+    height: 430px;
+    margin: 0 auto;
   }
+  .main-window-img img{
+    width: 250px;
+    height: 500px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 20px;
+  }
+  .main-window-info h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #232744;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .main-window-info-list{
+    margin-bottom: 12px;
+  }
+  .main-window-input{
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width:770px){
+  .main-window{
+    width: 490px;
+    height: 530px;
+  }
+  .main-window-info{
+    width: 200px;
+    height: 430px;
+    margin: 0 auto;
+  }
+  .main-window-img img{
+    width: 200px;
+    height: 500px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 20px;
+  }
+  .main-window-info h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #232744;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .main-window-info-list{
+    margin-bottom: 12px;
+  }
+  .main-window-input{
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width:500px){
+  .main-window{
+    width: 100vw;
+    height: 100%;
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+  .main-window-info{
+    width: calc(100% - 40px); 
+    height: 100%;
+    margin: 0 auto;
+    margin: 0 20px;
+  }
+  .main-window-img img{
+    display: none;
+  }
+  .main-window-info-mobile{
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .main-window-info h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #232744;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .main-window-info-list{
+    margin-bottom: 33px;
+  }
+  .first-list-item,
+  .second-list-item,
+  .third-list-item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  gap: 10px;
+  color: #232744;
+  margin-bottom: 20px;
+  }
+  .main-window-input{
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+  .main-window-button{
+    margin-bottom: 50px;
+  }
+  .success-window{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+  .success-window-block-info{
+    width: 100vw;
+    height: 320px;
+    margin: 0 20px;
+  }
+  .success-window button{
+    width: calc(100% - 40px); 
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    margin-bottom: 40px;
+  }
+  
 }
